@@ -1,11 +1,18 @@
-import Template from './components/Template';
+import Directory from "./components/directory/Directory";
 
 const App = () => {
-  return ( 
-    <div className="flex items-center justify-center h-80 m-auto">
-      <Template/>
+  const categories = [
+    { id: 1, title: "Hats", image: "./src/assets/hats.jpg" },
+    { id: 2, title: "Jackets", image: "./src/assets/jackets.jpg" },
+    { id: 3, title: "Sneakers", image: "./src/assets/sneakers.jpg" },
+    { id: 4, title: "Men", image: "./src/assets/man.jpg" },
+    { id: 5, title: "Women", image: "./src/assets/woman.jpg" },
+  ];
+  return (
+    <div>
+      <Directory categories={categories} />
     </div>
   );
-}
- 
+};
+
 export default App;
